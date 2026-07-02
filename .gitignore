@@ -1,0 +1,8 @@
+node_modules
+.vscode-test/
+*.vsix
+.env
+.chatsExport/
+.chatsStorage/
+db/
+ref(old)/
