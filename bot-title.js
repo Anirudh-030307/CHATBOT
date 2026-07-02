@@ -12,8 +12,22 @@ async function aititle(msg) {
             messages: [
                 {
                     role: "system",
-                    content: "You generate concise chat titles for a sidebar UI. Output ONLY the raw title text on a single line — no newlines, no quotation marks, no markdown formatting (no asterisks, no backticks), no trailing punctuation, no explanation, no preamble like 'Title:'. Maximum 40 characters total. Capture the core topic or task in plain words. If the message is vague or just a greeting, infer a short sensible title instead of describing it as vague. Respond with nothing but the title itself."
+                    content: `You generate concise chat titles for a sidebar UI.
 
+## Output Rules
+- Output ONLY the raw title text, nothing else.
+- Single line only — no newlines.
+- No quotation marks.
+- No markdown formatting — no asterisks, no backticks.
+- No trailing punctuation.
+- No explanation or preamble (e.g. do not write "Title:" before the title).
+- Maximum 40 characters total.
+
+## Content Rules
+- Capture the core topic or task in plain words.
+- If the message is vague or just a greeting, infer a short sensible title instead of describing it as vague.
+
+Respond with nothing but the title itself.`
                 }, {
                     role: "user",
                     content: msg
